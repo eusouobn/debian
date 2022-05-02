@@ -60,9 +60,13 @@ mv xfce-perchannel-xml ~/.config/xfce4/xfconf/
 cd ..
 sudo rm -r xfce
 
-sudo apt install -y ttf-mscorefonts-installer
+sudo apt install -y ttf-mscorefonts-installer ubuntu-fonts fonts-liberation2
 
 sudo dpkg-reconfigure fontconfig-config
+
+mkdir -p ~/.config/fontconfig/
+
+mv ~/debian/fonts.conf ~/.config/fontconfig/
 
 sudo apt install -y zsh git wget && sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
