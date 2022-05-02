@@ -28,7 +28,7 @@ bash && sudo cp /usr/share/doc/pipewire/examples/ld.so.conf.d/pipewire-jack-*.co
 
 sudo apt purge pulseaudio-module-bluetooth
 
-sudo dpkg --add-architecture i386 && sudo apt install -y firmware-linux-nonfree firmware-linux-free firmware-linux pipewire libspa-0.2-bluetooth mtp-tools gvfs-backends simplescreenrecorder ffmpeg psensor synaptic gimp gnome-disk-utility frei0r-plugins ntfs-3g exfat-fuse gsmartcontrol rar unrar-free obs-studio uget adb fastboot mtp-tools gvfs-backends qbittorrent winff unace zip unzip p7zip-full sharutils uudeview mpack arj unrar-free file-roller fonts-roboto telegram-desktop gamemode fonts-noto-color-emoji f2fs-tools fatsort mpv audacious inkscape audacity gdebi papirus-icon-theme
+sudo dpkg --add-architecture i386 && sudo apt install -y firmware-linux-nonfree firmware-linux-free firmware-linux pipewire libspa-0.2-bluetooth ubuntu-fonts mtp-tools gvfs-backends simplescreenrecorder ffmpeg psensor synaptic gimp gnome-disk-utility frei0r-plugins ntfs-3g exfat-fuse gsmartcontrol rar unrar-free obs-studio uget adb fastboot mtp-tools gvfs-backends qbittorrent winff unace zip unzip p7zip-full sharutils uudeview mpack arj unrar-free file-roller fonts-roboto telegram-desktop gamemode fonts-noto-color-emoji f2fs-tools fatsort mpv audacious inkscape audacity gdebi papirus-icon-theme
 
 sudo dpkg --add-architecture i386 && wget -nc https://dl.winehq.org/wine-builds/winehq.key && sudo apt-key add winehq.key && echo deb https://dl.winehq.org/wine-builds/debian/ bullseye main | sudo tee /etc/apt/sources.list.d/winehq.list && sudo apt update && sudo apt install --install-recommends winehq-staging -y
 
