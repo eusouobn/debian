@@ -10,13 +10,13 @@ sudo apt update
 
 sudo apt install -y curl zstd && curl 'https://liquorix.net/add-liquorix-repo.sh' | sudo bash && sudo apt-get install -y linux-image-liquorix-amd64 linux-headers-liquorix-amd64 && sudo update-grub
 
-echo "alias att='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y'" >>  ~/.zshrc
+echo 'alias att='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y'' >>  ~/.zshrc
 
-echo "alias reboot='systemctl reboot'" >>  ~/.zshrc
+echo 'alias reboot='systemctl reboot'' >>  ~/.zshrc
 
-echo -e 'APT::Install-Suggests "false";' | sudo tee /etc/apt/apt.conf
+echo 'APT::Install-Suggests "false";' | sudo tee /etc/apt/apt.conf
 
-echo -e 'vm.dirty_background_ratio = 2 \nvm.dirty_ratio = 5' | sudo tee /etc/sysctl.conf && sudo sysctl -p 
+echo 'vm.dirty_background_ratio = 2 \nvm.dirty_ratio = 5' | sudo tee /etc/sysctl.conf && sudo sysctl -p 
 
 sudo apt install -y wireplumber pipewire-pulse pipewire-audio-client-libraries libspa-0.2-jack pipewire-media-session-
 
@@ -36,7 +36,7 @@ sudo apt install bluetooth bluez bluez-firmware pavucontrol blueman
 
 sudo dpkg --add-architecture i386 && sudo apt update && sudo apt purge amd64-microcode va-driver-all mesa-va-drivers && sudo apt install --install-recommends -y i965-va-driver libegl1-mesa libegl1-mesa-dev libgl1-mesa-dri libgl1-mesa-dri:i386 libgl1-mesa-glx libgl1-mesa-glx:i386 libglapi-mesa libglapi-mesa:i386 libgles2-mesa mesa-utils mesa-vulkan-drivers
 
-echo -e 'Section "Device"\n Identifier "Intel Graphics"\n Driver "Intel"\n Option "TearFree" "true"\nEndSection' | sudo tee /etc/X11/xorg.conf.d/20-intel.conf
+echo 'Section "Device"\n Identifier "Intel Graphics"\n Driver "Intel"\n Option "TearFree" "true"\nEndSection' | sudo tee /etc/X11/xorg.conf.d/20-intel.conf
 
 sudo systemctl disable NetworkManager-wait-online.service
 
@@ -46,9 +46,9 @@ sudo apt install -y galculator xfce4-screenshooter ristretto mousepad hardinfo a
 
 echo "deb http://download.opensuse.org/repositories/home:/strycore/Debian_Unstable/ ./" | sudo tee /etc/apt/sources.list.d/lutris.list && wget -q https://download.opensuse.org/repositories/home:/strycore/Debian_Unstable/Release.key -O- | sudo apt-key add - && sudo apt update && sudo apt install lutris -y
 
-sudo apt install qt5ct -y && echo -e '\nQT_QPA_PLATFORMTHEME=qt5ct\nQT_AUTO_SCREEN_SCALE_FACTOR=0' | sudo tee -a /etc/environment
+sudo apt install qt5ct -y && echo '\nQT_QPA_PLATFORMTHEME=qt5ct\nQT_AUTO_SCREEN_SCALE_FACTOR=0' | sudo tee -a /etc/environment
 
-echo -e 'net.ipv4.ping_group_range = 1000 1000' | sudo tee -a /etc/sysctl.d/60-mysql.conf
+echo 'net.ipv4.ping_group_range = 1000 1000' | sudo tee -a /etc/sysctl.d/60-mysql.conf
 
 sudo cp /usr/share/applications/gdebi.desktop /usr/share/applications/gdebi.desktop.bak && sudo sed -i '155c\Exec=sh -c "gdebi-gtk %f"' /usr/share/applications/gdebi.desktop
 
