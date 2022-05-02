@@ -68,6 +68,6 @@ mkdir -p ~/.config/fontconfig/
 
 mv ~/debian/fonts.conf ~/.config/fontconfig/
 
-sudo apt install -y zsh git wget && sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sudo apt install -y zsh git wget && sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" & sudo sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 sudo sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
