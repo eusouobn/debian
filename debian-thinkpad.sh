@@ -34,7 +34,7 @@ sudo dpkg --add-architecture i386 && wget -nc https://dl.winehq.org/wine-builds/
 
 sudo apt install bluetooth bluez bluez-firmware pavucontrol blueman 
 
-sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install --install-recommends -y libegl1-mesa libegl1-mesa-dev libgl1-mesa-dri libgl1-mesa-dri:i386 libgl1-mesa-glx libgl1-mesa-glx:i386 libglapi-mesa libglapi-mesa:i386 libgles2-mesa mesa-utils mesa-vulkan-drivers
+sudo dpkg --add-architecture i386 && sudo apt update && sudo apt purge amd64-microcode va-driver-all && sudo apt install --install-recommends -y i965-va-driver libegl1-mesa libegl1-mesa-dev libgl1-mesa-dri libgl1-mesa-dri:i386 libgl1-mesa-glx libgl1-mesa-glx:i386 libglapi-mesa libglapi-mesa:i386 libgles2-mesa mesa-utils mesa-vulkan-drivers
 
 echo -e 'Section "Device"\n Identifier "Intel Graphics"\n Driver "Intel"\n Option "TearFree" "true"\nEndSection' | sudo tee /etc/X11/xorg.conf.d/20-intel.conf
 
@@ -59,7 +59,6 @@ rm -r ~/.config/xfce4/xfconf/xfce-perchannel-xml
 mv xfce-perchannel-xml ~/.config/xfce4/xfconf/
 cd ..
 sudo rm -r xfce
-
 
 sudo apt install -y ttf-mscorefonts-installer
 
