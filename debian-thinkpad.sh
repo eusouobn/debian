@@ -20,7 +20,7 @@ echo 'vm.dirty_background_ratio = 2 \nvm.dirty_ratio = 5' | sudo tee /etc/sysctl
 
 sudo apt install -y wireplumber pipewire-pulse pipewire-audio-client-libraries libspa-0.2-jack pipewire-media-session-
 
-systemctl --user --now enable wireplumber.service
+systemctl --user --now enable wireplumber.service pipewire-pulse.service pipewire.service
 
 sudo cp /usr/share/doc/pipewire/examples/alsa.conf.d/99-pipewire-default.conf /usr/share/alsa/alsa.conf.d/
 
